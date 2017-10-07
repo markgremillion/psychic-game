@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+	<h1> Try to guess the letter I am thinking of!</h1>
+
+	<script>
+		var computerChoice= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+		var wins;
+		var losses;
+		var ties;
+		var userInput=0
+
+		
+
+document.onkeyup= function(event){
+	var userInput= event.key;
+    var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+
+
+	if (userInput===computerGuess) {
+		alert("you guessed correct")
+		console.log(userInput)
+		console.log(computerGuess)
+	}
+	else {
+		alert("you guessed incorrect")
+	}
+}
+	
+
+</script>
+</body>
+</html>
