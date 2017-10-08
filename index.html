@@ -5,17 +5,22 @@
   <meta charset="UTF-8">
   <title>Rock Paper Scissors Part 2
   </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
 <body>
-	<h1> Try to guess the letter I am thinking of!</h1>
-
+	<div class "jumbotron text-center">
+	<h1 class > Try to guess the letter I am thinking of!</h1><h3> <strong>Press any key to begin</strong></h3>
+<div id="wins">Wins</div><p>Times you have won</p>
+<div id="losses">losses</div><p> Times you have lost</p>
+	
 	<script>
 		var computerChoice= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-		var wins;
-		var losses;
-		var ties;
+		var wins=0;
+		var losses=0;
+		var ties=0;
 		var userInput=0
+
 
 		
 
@@ -28,9 +33,16 @@ document.onkeyup= function(event){
 		alert("you guessed correct")
 		console.log(userInput)
 		console.log(computerGuess)
+		wins++;
+		document.getElementById('wins').innerHTML=wins;
+		console.log(wins)
+
 	}
 	else {
 		alert("you guessed incorrect")
+		losses++;
+		document.getElementById('losses').innerHTML=losses;
+		console.log(losses)
 	}
 }
 	
